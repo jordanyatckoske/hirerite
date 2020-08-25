@@ -1,0 +1,351 @@
+@import "./_include-media";
+@import "~bulma/bulma.sass";
+
+// <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
+// Font-Family: 'Merriweather', Serif;
+// Font-Size: 46px;
+// Font-Family: 'Muli', Sans-Serif;
+// Font-Size: 16px;
+// Font-Family: 'Slabo 13px', Serif;
+// Font-Size: 48px;
+// Font-Family: 'Lato', Sans-Serif;
+// Font-Size: 16px;
+// MIXINS
+@mixin modifiers($map, $attribute, $prefix: "-", $separator: "-") {
+  @each $key, $value in $map {
+    &#{$prefix}#{$key} {
+      @if type-of($value) == "map" {
+        @include modifiers($value, $attribute, $separator);
+      } @else {
+        #{$attribute}: $value;
+      }
+    }
+  }
+}
+@mixin border-radius {
+  border-radius: 0.5em;
+}
+@mixin transition {
+  -moz-transition: all 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: all 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: all 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+@mixin hover {
+  @include transition;
+  @include shadow;
+  opacity: 0.85;
+}
+@mixin shadow {
+  -moz-box-shadow: 3px 2px 7px 1px #ccc;
+  -webkit-box-shadow: 3px 2px 7px 1px #ccc;
+  box-shadow: 3px 2px 7px 1px #ccc;
+}
+
+// THEME COLORS
+$white: #ffffff;
+$light-gray: #cbd0d5;
+$dark-gray: #4a4a4a;
+$black: #000000;
+$orange: #f07a12;
+$light-orange: #fdb43d;
+// $pink: #ff017f;
+$red: #ff010d;
+$green: #01d809;
+$baby-blue: #138ee7;
+$dark-blue: #112c6b;
+$light-blue: #5cdde3;
+
+$colors: (
+  "black": $black,
+  "dark-gray": $dark-gray,
+  "light-gray": $light-gray,
+  "white": $white,
+  "orange": $orange,
+  "light-orange": $light-orange,
+  // "pink": $pink,
+    "red": $red,
+  "green": $green,
+  "baby-blue": $baby-blue,
+  "dark-blue": $dark-blue,
+  "light-blue": $light-blue,
+);
+
+// ELEMENT STYLES RESET
+// html {
+//   width: 100vw;
+//   margin: 0;
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+// *,
+// *:before,
+// *:after {
+//   -webkit-box-sizing: inherit;
+//   -moz-box-sizing: inherit;
+//   box-sizing: inherit;
+// }
+body {
+  margin: 0;
+  font-size: 35px;
+  font-family: "Merriweather", Serif;
+  font-size: 46px;
+
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+p,
+input,
+label,
+textarea {
+  font-family: "Muli", Sans-Serif;
+  font-size: 16px;
+  // font-size: 0.75em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Merriweather", Serif;
+}
+label,
+button {
+  font-size: 0.75rem;
+}
+// input,
+// textarea {
+//   @include border-radius;
+//   @include transition;
+
+//   padding: 0.5em;
+//   border: thin solid $light-gray;
+//   margin: 0.25em 0 1em 0;
+//   outline: none;
+//   max-width: 100%;
+
+//   &::placeholder {
+//     color: $light-gray;
+//     font-weight: 100;
+//   }
+
+//   &:focus {
+//     @include transition;
+//     @include shadow;
+
+//     border: thin solid $white;
+//   }
+
+//   &:hover {
+//     @include hover;
+//   }
+
+//   &:invalid:not(:placeholder-shown):not(focus) {
+//     border: 1px solid $red;
+//   }
+
+//   &[type="password"]:invalid:focus:not(:placeholder-shown) {
+//     & ~ .validation-text {
+//       max-height: 4em;
+//       margin-top: 2.5em;
+//     }
+//   }
+
+//   &:valid {
+//     border: 1px solid $green;
+//   }
+// }
+// button {
+//   @include border-radius;
+//   @include transition;
+
+//   padding: 0.5em 1em;
+//   cursor: pointer;
+//   border-style: none;
+//   background: linear-gradient(
+//     138deg,
+//     $baby-blue,
+//     $light-blue,
+//     $light-orange,
+//     $orange
+//   );
+//   background-size: 300% 100%;
+
+//   &:hover {
+//     @include hover;
+//     background-position: 100% 0;
+//   }
+// }
+
+// // CLASS STYLES
+// .text {
+//   @include modifiers($colors, "color");
+// }
+
+// .subtitle {
+//   opacity: 0.85;
+// }
+
+.overline {
+  line-height: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// .align-right {
+//   text-align: right;
+// }
+
+// .m-0 {
+//   margin: 0;
+// }
+
+// .group {
+//   padding: 0.5em 0;
+
+//   @include media(">=tablet") {
+//     padding: 0.75em 0;
+//   }
+// }
+
+// .validation-text {
+//   @include transition;
+
+//   font-size: 0.5em;
+//   overflow: hidden;
+//   max-height: 0;
+// }
+
+// .card {
+//   @include border-radius;
+//   @include shadow;
+//   @include transition;
+
+//   background-color: white;
+//   flex: 100%;
+//   padding: 0.5em;
+//   margin: 0.5em auto;
+//   width: 90%;
+
+//   @include media(">=tablet") {
+//     width: 80%;
+//     padding: 1em;
+//     margin: 1em auto;
+//   }
+
+//   @include media(">=desktop") {
+//     width: 70%;
+//     max-width: 800px;
+//   }
+// }
+
+// // FLEXBOX GRID
+// .section {
+//   // position: absolute;
+//   // width: 100%;
+//   // top: 0;
+//   // left: 0;
+//   margin: 1rem;
+// }
+// .jumbotron {
+//   padding: 3rem;
+// }
+// .container {
+//   display: block;
+
+//   @include media(">phone") {
+//     display: flex;
+//     margin: auto;
+//     justify-content: flex-start;
+//     flex-wrap: wrap;
+//   }
+
+//   .col {
+//     flex: 1;
+//   }
+//   .col-full {
+//     width: 100%;
+//   }
+//   .col-one-quarter {
+//     width: 100%;
+
+//     @include media(">=tablet") {
+//       width: 24%;
+//     }
+//   }
+//   .col-three-quarters {
+//     width: 100%;
+
+//     @include media(">=tablet") {
+//       width: 74%;
+//     }
+//   }
+//   .col-half {
+//     width: 100%;
+
+//     @include media(">=tablet") {
+//       width: 50%;
+//     }
+//   }
+
+//   .reverse {
+//     justify-content: end;
+//   }
+// }
+
+// // TRANSITION ANIMATION CLASSES
+// .fade-enter {
+//   opacity: 0.01;
+// }
+// .fade-enter.fade-enter-active {
+//   opacity: 1;
+//   transition: opacity 300ms ease-in;
+// }
+// .fade-exit {
+//   opacity: 1;
+// }
+
+// .fade-exit.fade-exit-active {
+//   opacity: 0.01;
+//   transition: opacity 300ms ease-in;
+// }
+
+// .transition-group {
+//   position: relative;
+// }
+
+// .section {
+//   // position: absolute;
+//   // width: 100%;
+//   // top: 0;
+//   // left: 0;
+// }
+
+// CUSTOM SCROLLBAR
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: $white;
+}
+
+// ::-webkit-scrollbar-track {
+//   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//   background-color: $white;
+// }
+
+::-webkit-scrollbar-thumb {
+  background-color: $red;
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, $dark-blue),
+    color-stop(0.86, $light-blue),
+    color-stop(0.72, $baby-blue)
+  );
+}

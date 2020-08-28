@@ -133,6 +133,9 @@ svg {
     width: 75%;
   }
 }
+.navbar svg {
+  max-height: 3.5rem;
+}
 input,
 textarea {
   //   @include border-radius;

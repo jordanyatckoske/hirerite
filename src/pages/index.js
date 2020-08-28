@@ -31,10 +31,9 @@ export default function Home() {
         <div className="hero-body columns is-multiline is-vcentered">
           <div className="column is-one-third columns is-multiline is-mobile has-text-centered-mobile has-text-left-tablet">
             <div className="column is-full">
-              <p className="overline">Welcome to Hirerite</p>
-              <h1 className="title is-1">Advance your company</h1>
+              <h1 className="title is-1">Looking to Hire? We can help.</h1>
               <p className="subtitle">
-                We help companies build teams and find the best people.
+                Experts in building teams and recruiting the best candidates.
               </p>
             </div>
             <div className="column is-full-mobile is-full-tablet is-half-desktop">

@@ -1,8 +1,8 @@
 @import "./_include-media";
 @import "~bulma/bulma.sass";
 
-// <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
-// Font-Family: 'Merriweather', Serif;
+// <link href="https://fonts.googleapis.com/css?family=Varela|Muli:300" rel="stylesheet">
+// Font-Family: 'Varela', Serif;
 // Font-Size: 46px;
 // Font-Family: 'Muli', Sans-Serif;
 // Font-Size: 16px;
@@ -88,7 +88,7 @@ $colors: (
 body {
   margin: 0;
   font-size: 35px;
-  font-family: "Merriweather", Serif;
+  font-family: "Varela", Serif;
   font-size: 46px;
 
   background-color: white;
@@ -116,7 +116,7 @@ h4,
 h5,
 h6,
 button {
-  font-family: "Merriweather", Serif;
+  font-family: "Varela", Serif;
 }
 label,
 button {
@@ -127,10 +127,10 @@ button {
 //     0 0px 0 1px rgba(10, 10, 10, 0.02) !important;
 // }
 svg {
-  width: 80%;
+  width: 60%;
 
   @include media(">tablet") {
-    width: 75%;
+    width: 70%;
   }
 }
 .navbar svg {

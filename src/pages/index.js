@@ -21,6 +21,22 @@ export default function Home() {
     companyForm.current.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: JSON.stringify({
+        "form-name": "companyContact",
+        name: companyName,
+        email: companyEmail,
+      }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+  }
+
   // const scrollToCandidateForm = () => {
   //   candidateForm.current.scrollIntoView({ behavior: "smooth", block: "start" })
   // }
@@ -109,13 +125,11 @@ export default function Home() {
               We can connect you with the top candidates searching for work at
               companies like yours!
             </p>
-            <form
-              className=""
-              name="companyContact"
+            <form onSubmit={handleSubmit}>
+              {/* name="companyContact"
               method="post"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
+              data-netlify-honeypot="bot-field" */}
               <input type="hidden" name="form-name" value="companyContact" />
               <div className="field">
                 <label className="label has-text-left" htmlFor="name">

@@ -125,10 +125,10 @@ export default function Home() {
               We can connect you with the top candidates searching for work at
               companies like yours!
             </p>
-            <form onSubmit={handleSubmit} action="/">
+            <form onSubmit={handleSubmit} action="/" data-netlify="true">
               {/* name="companyContact"
               method="post"
-              data-netlify="true"
+              
               data-netlify-honeypot="bot-field" */}
               <input type="hidden" name="form-name" value="companyContact" />
               <div className="field">

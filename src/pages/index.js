@@ -14,6 +14,7 @@ export default function Home() {
   // const [candidateEmail, setCandidateEmail] = useState("")
   const [companyName, setCompanyName] = useState("")
   const [companyEmail, setCompanyEmail] = useState("")
+  const [error, setError] = useState(null)
   const companyForm = useRef(null)
   // const candidateForm = useRef(null)
 
@@ -33,13 +34,12 @@ export default function Home() {
         email: companyEmail,
       }),
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error))
+      .then(() => {
+        setCompanyName("")
+        setCompanyEmail("")
+      })
+      .catch(error => setError("Unable to submit at this time."))
   }
-
-  // const scrollToCandidateForm = () => {
-  //   candidateForm.current.scrollIntoView({ behavior: "smooth", block: "start" })
-  // }
 
   return (
     <Layout>
@@ -125,7 +125,7 @@ export default function Home() {
               We can connect you with the top candidates searching for work at
               companies like yours!
             </p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} action="/">
               {/* name="companyContact"
               method="post"
               data-netlify="true"
@@ -172,6 +172,9 @@ export default function Home() {
                   Build your team
                 </button>
               </div>
+              {error ? (
+                <div className="subtitle has-text-danger">{error}</div>
+              ) : null}
             </form>
           </div>
         </div>

@@ -125,8 +125,13 @@ export default function Home() {
               We can connect you with the top candidates searching for work at
               companies like yours!
             </p>
-            <form onSubmit={handleSubmit} action="/" data-netlify="true">
-              {/* name="companyContact"
+            <form
+              onSubmit={handleSubmit}
+              name="companyContact"
+              action="/"
+              data-netlify="true"
+            >
+              {/* 
               method="post"
               
               data-netlify-honeypot="bot-field" */}

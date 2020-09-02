@@ -126,6 +126,7 @@ export default function Home() {
                     className="input"
                     type="text"
                     id="name"
+                    name="name"
                     value={companyName}
                     placeholder="John"
                     required
@@ -143,6 +144,7 @@ export default function Home() {
                     className="input"
                     type="email"
                     id="email"
+                    name="email"
                     value={companyEmail}
                     placeholder="hired@gmail.com"
                     required

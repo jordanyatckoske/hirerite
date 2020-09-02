@@ -112,9 +112,11 @@ export default function Home() {
             <form
               className=""
               name="companyContact"
-              method="POST"
+              method="post"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
             >
+              <input type="hidden" name="form-name" value="companyContact" />
               <div className="field">
                 <label className="label has-text-left" htmlFor="name">
                   Name

@@ -432,8 +432,7 @@ button.button-purple-gradient {
     linear,
     left bottom,
     left top,
-    color-stop(0.44, $dark-blue),
-    color-stop(0.86, $light-blue),
-    color-stop(0.72, $baby-blue)
+    color-stop(0.8, $pink),
+    color-stop(0.2, $purple)
   );
 }

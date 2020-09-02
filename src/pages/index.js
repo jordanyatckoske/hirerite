@@ -37,6 +37,7 @@ export default function Home() {
       .then(() => {
         setCompanyName("")
         setCompanyEmail("")
+        alert("success")
       })
       .catch(error => setError("Unable to submit at this time."))
   }
@@ -126,16 +127,18 @@ export default function Home() {
               companies like yours!
             </p>
             <form
-              onSubmit={handleSubmit}
+              onSubmit={e => handleSubmit(e)}
               name="companyContact"
-              action="/"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
             >
               {/* 
               method="post"
               
-              data-netlify-honeypot="bot-field" */}
+               */}
               <input type="hidden" name="form-name" value="companyContact" />
+              <input type="hidden" name="bot-field" />
+
               <div className="field">
                 <label className="label has-text-left" htmlFor="name">
                   Name

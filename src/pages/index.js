@@ -15,6 +15,7 @@ export default function Home() {
   const [companyName, setCompanyName] = useState("")
   const [companyEmail, setCompanyEmail] = useState("")
   const [error, setError] = useState(null)
+  const [submitted, setSubmitted] = useState(false)
   const companyForm = useRef(null)
   // const candidateForm = useRef(null)
 
@@ -43,7 +44,7 @@ export default function Home() {
       .then(() => {
         setCompanyName("")
         setCompanyEmail("")
-        alert("success")
+        setSubmitted(true)
       })
       .catch(error => setError("Unable to submit at this time."))
   }
@@ -55,7 +56,9 @@ export default function Home() {
         <div className="hero-body columns is-multiline is-vcentered">
           <div className="column is-half columns is-multiline is-mobile has-text-centered-mobile has-text-left-tablet">
             <div className="column is-full">
-              <h1 className="title is-1">Looking to Hire? We can help.</h1>
+              <h1 className="title is-1">
+                Looking to Hire? <br /> We can help.
+              </h1>
               <p className="subtitle">
                 We build teams and help you hire the right people.
               </p>
@@ -180,13 +183,18 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="">
+              <div className="mt-5">
                 <button className="button button-blue-gradient" type="submit">
                   Build your team
                 </button>
               </div>
               {error ? (
                 <div className="subtitle has-text-danger">{error}</div>
+              ) : null}
+              {submitted ? (
+                <div className="subtitle has-text-success">
+                  Thank you for contacting us, we will be in touch!
+                </div>
               ) : null}
             </form>
           </div>

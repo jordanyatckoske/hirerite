@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
       <Helmet>
         {/* <link href="https://fonts.googleapis.com/css?family=Lato|Slabo+13px" rel="stylesheet"/> */}
         <link
-          href="https://fonts.googleapis.com/css?family=Varela|Muli:300"
+          href="https://fonts.googleapis.com/css?family=Roboto|Muli"
           rel="stylesheet"
         />
         <title>Hirerite</title>

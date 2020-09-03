@@ -1,8 +1,8 @@
 @import "./_include-media";
 @import "~bulma/bulma.sass";
 
-// <link href="https://fonts.googleapis.com/css?family=Varela|Muli:300" rel="stylesheet">
-// Font-Family: 'Varela', Serif;
+// <link href="https://fonts.googleapis.com/css?family=Roboto|Muli:300" rel="stylesheet">
+// Font-Family: 'Roboto', Serif;
 // Font-Size: 46px;
 // Font-Family: 'Muli', Sans-Serif;
 // Font-Size: 16px;
@@ -88,7 +88,7 @@ $colors: (
 body {
   margin: 0;
   font-size: 35px;
-  font-family: "Varela", Serif;
+  font-family: "Roboto", Serif;
   font-size: 46px;
 
   background-color: white;
@@ -116,7 +116,7 @@ h4,
 h5,
 h6,
 button {
-  font-family: "Varela", Serif;
+  font-family: "Roboto", Serif;
 }
 label,
 button {
@@ -136,33 +136,18 @@ svg {
 .navbar svg {
   max-height: 3.5rem;
 }
-input,
+form .field .control input,
 textarea {
-  //   @include border-radius;
-  //   @include transition;
+  border: thin solid $light-gray;
+  outline: none;
 
-  //   padding: 0.5em;
-  //   border: thin solid $light-gray;
-  //   margin: 0.25em 0 1em 0;
-  //   outline: none;
-  //   max-width: 100%;
+  @include media(">=tablet") {
+    max-width: 450px;
+  }
 
-  //   &::placeholder {
-  //     color: $light-gray;
-  //     font-weight: 100;
-  //   }
-
-  //   &:focus {
-  //     @include transition;
-  //     @include shadow;
-
-  //     border: thin solid $white;
-  //   }
-
-  //   &:hover {
-  //     @include hover;
-  //   }
-  border: 1px solid transparent;
+  &:focus {
+    border: thin solid $white;
+  }
 
   &:invalid:not(:placeholder-shown):not(focus) {
     border: 1px solid $red;
@@ -282,6 +267,12 @@ button.button-purple-gradient {
   line-height: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.column .subtitle {
+  @include media(">=tablet") {
+    max-width: 400px;
+  }
 }
 
 // .align-right {

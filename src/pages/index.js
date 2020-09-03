@@ -22,13 +22,19 @@ export default function Home() {
     companyForm.current.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
   const handleSubmit = e => {
     e.preventDefault()
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify({
+      body: encode({
         "form-name": "companyContact",
         name: companyName,
         email: companyEmail,
@@ -127,8 +133,7 @@ export default function Home() {
               companies like yours!
             </p>
             <form
-              onSubmit={e => handleSubmit(e)}
-              name="companyContact"
+              onSubmit={handleSubmit}
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >

@@ -56,7 +56,7 @@ export default function Home() {
       <div className="hero tablet-fullheight">
         <div className="hero-body columns is-multiline is-vcentered">
           <div className="column is-half columns is-multiline is-mobile has-text-centered-mobile has-text-left-tablet">
-            <Fade bottom cascade fraction={0.5}>
+            <Fade bottom cascade fraction={0.5} ssrFadeout={true}>
               <div className="column is-full">
                 <h1 className="title is-1">
                   Looking to Hire? <br /> We can help.
@@ -66,7 +66,7 @@ export default function Home() {
                 </p>
               </div>
             </Fade>
-            <Fade bottom delay={500} fraction={0.5}>
+            <Fade bottom delay={500} fraction={0.5} ssrFadeout={true}>
               <div className="column is-full-mobile is-full-tablet is-half-desktop">
                 <button
                   onClick={scrollToCompanyForm}

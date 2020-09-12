@@ -8,10 +8,12 @@ const Layout = ({ children }) => {
   return (
     <div className="container-fluid">
       <Helmet>
-        {/* <link href="https://fonts.googleapis.com/css?family=Lato|Slabo+13px" rel="stylesheet"/> */}
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto|Muli"
-          rel="stylesheet"
+        <html lang="en" />
+        <meta
+          name="description"
+          content="
+          We build teams and help you hire the right people through our software
+          and trusted recruiting history."
         />
         <title>Hirerite</title>
         <link

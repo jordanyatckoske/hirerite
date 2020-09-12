@@ -56,7 +56,7 @@ export default function Home() {
       <div className="hero tablet-fullheight">
         <div className="hero-body columns is-multiline is-vcentered">
           <div className="column is-half columns is-multiline is-mobile has-text-centered-mobile has-text-left-tablet">
-            <Fade bottom cascade>
+            <Fade bottom cascade fraction={0.5}>
               <div className="column is-full">
                 <h1 className="title is-1">
                   Looking to Hire? <br /> We can help.
@@ -66,7 +66,7 @@ export default function Home() {
                 </p>
               </div>
             </Fade>
-            <Fade bottom delay={500}>
+            <Fade bottom delay={500} fraction={0.5}>
               <div className="column is-full-mobile is-full-tablet is-half-desktop">
                 <button
                   onClick={scrollToCompanyForm}
@@ -86,7 +86,7 @@ export default function Home() {
             </Fade>
           </div>
           <div className="column is-half has-text-centered-mobile has-text-right-tablet">
-            <Fade right delay={750}>
+            <Fade right delay={750} fraction={0.5}>
               <StackedResumes />
             </Fade>
           </div>
@@ -97,12 +97,12 @@ export default function Home() {
       <div className="bg-circles section  my-5 has-text-centered-mobile has-text-left-tablet">
         <div className="container columns column-reverse-mobile is-multiline is-vcentered is-mobile">
           <div className="column is-full-mobile is-half-tablet has-text-centered-mobile has-text-left-tablet">
-            <Fade left delay={500}>
+            <Fade left delay={500} fraction={0.5}>
               <TeamMembers />
             </Fade>
           </div>
           <div className="column is-full-mobile is-half-tablet columns is-multiline is-mobile">
-            <Fade bottom cascade>
+            <Fade bottom cascade fraction={0.5}>
               <div className="column is-full">
                 <p className="overline">Trusted history</p>
                 <h1 className="title is-1">Our success story</h1>
@@ -119,7 +119,7 @@ export default function Home() {
       {/* SOFTWARE */}
       <div className="section my-5">
         <div className="container columns is-multiline is-vcentered">
-          <Fade bottom cascade>
+          <Fade bottom cascade fraction={0.5}>
             <div className="column is-half has-text-centered-mobile has-text-left-tablet">
               <p className="overline">Our technology</p>
               <h1 className="title is-1">Powered by our software</h1>
@@ -131,7 +131,7 @@ export default function Home() {
           </Fade>
 
           <div className="column is-half has-text-centered-mobile has-text-right-tablet">
-            <Fade right delay={500}>
+            <Fade right delay={500} fraction={0.5}>
               <BrowserProfiles />
             </Fade>
           </div>
@@ -142,12 +142,12 @@ export default function Home() {
       <div ref={companyForm} className="section my-5">
         <div className="container columns column-reverse-mobile is-mobile is-multiline is-vcentered ">
           <div className="column is-full-mobile is-half-tablet has-text-centered-mobile has-text-left-tablet">
-            <Fade left ssrFadeout={true}>
+            <Fade left fraction={0.5}>
               <DeskAgreement />
             </Fade>
           </div>
           <div className="column is-full-mobile is-half-tablet has-text-centered-mobile has-text-left-tablet">
-            <Fade bottom ssrFadeout={true}>
+            <Fade bottom>
               <p className="overline">Let's connect</p>
               <h1 className="title is-1">Looking to hire?</h1>
               <p className="subtitle">
@@ -160,13 +160,9 @@ export default function Home() {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              {/* 
-              method="post"
-              
-               */}
               <input type="hidden" name="form-name" value="companyContact" />
               <input type="hidden" name="bot-field" />
-              <Fade bottom cascade delay={400} ssrFadeout={true}>
+              <Fade bottom cascade delay={400} fraction={0.5}>
                 <div className="field">
                   <label className="label has-text-left" htmlFor="name">
                     Name
@@ -185,7 +181,7 @@ export default function Home() {
                   </div>
                 </div>
               </Fade>
-              <Fade bottom cascade delay={750} ssrFadeout={true}>
+              <Fade bottom cascade delay={750} fraction={0.5}>
                 <div className="field">
                   <label className="label has-text-left" htmlFor="email">
                     Email
@@ -204,7 +200,7 @@ export default function Home() {
                   </div>
                 </div>
               </Fade>
-              <Fade bottom cascade delay={900} ssrFadeout={true}>
+              <Fade bottom cascade delay={900} fraction={0.5}>
                 <div className="mt-5">
                   <button className="button button-blue-gradient" type="submit">
                     Build your team
@@ -217,7 +213,7 @@ export default function Home() {
                 </HeadShake>
               ) : null}
               {submitted ? (
-                <Fade bottom>
+                <Fade bottom fraction={0.5}>
                   <div className="subtitle has-text-success">
                     Thank you for contacting us, we will be in touch!
                   </div>

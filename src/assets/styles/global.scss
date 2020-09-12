@@ -140,13 +140,14 @@ form .field .control input,
 textarea {
   border: thin solid $light-gray;
   outline: none;
+  transition: 0.5s border ease-in-out;
 
   @include media(">=tablet") {
     max-width: 450px;
   }
 
   &:focus {
-    border: thin solid $white;
+    border: thin solid $light-blue;
   }
 
   &:invalid:not(:placeholder-shown):not(focus) {
@@ -256,6 +257,18 @@ button.button-purple-gradient {
 // .subtitle {
 //   opacity: 0.85;
 // }
+// .bg-circles {
+//   background-image: url("/threeCircles.png");
+//   background-repeat: no-repeat;
+//   background-position-x: right;
+//   background-position-y: bottom;
+//   background-size: 150px 150px;
+// }
+.tablet-fullheight {
+  @include media(">tablet") {
+    min-height: 100vh;
+  }
+}
 .column-reverse-mobile {
   @include media(">tablet") {
     flex-direction: row;

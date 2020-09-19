@@ -62,7 +62,7 @@ export default function Home() {
                   Looking to Hire? <br /> We can help.
                 </h1>
                 <p className="subtitle">
-                  We build teams and help you hire the right people.
+                  We build teams and help you hire the right people
                 </p>
               </div>
             </Fade>
@@ -72,7 +72,7 @@ export default function Home() {
                   onClick={scrollToCompanyForm}
                   className="button button-purple-gradient"
                 >
-                  Build your team
+                  Let's chat
                 </button>
               </div>
               {/* <div className="column is-full-mobile is-full-tablet is-half-desktop">
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* TRUSTED HISTORY */}
+      {/* PROVEN PROCESS */}
       <div className="bg-circles section  my-5 has-text-centered-mobile has-text-left-tablet">
         <div className="container columns column-reverse-mobile is-multiline is-vcentered is-mobile">
           <div className="column is-full-mobile is-half-tablet has-text-centered-mobile has-text-left-tablet">
@@ -104,11 +104,11 @@ export default function Home() {
           <div className="column is-full-mobile is-half-tablet columns is-multiline is-mobile">
             <Fade bottom cascade fraction={0.5}>
               <div className="column is-full">
-                <p className="overline">Trusted history</p>
-                <h1 className="title is-1">Our success story</h1>
+                {/* <p className="overline">Trusted history</p> */}
+                <h1 className="title is-1">Our proven process</h1>
                 <p className="subtitle">
-                  We help companies recruit the best candidates for the
-                  positions in IT, Marketing, HR, and Sales
+                  We help companies recruit the best candidates in technology,
+                  marketing, sales, and HR
                 </p>
               </div>
             </Fade>
@@ -121,11 +121,11 @@ export default function Home() {
         <div className="container columns is-multiline is-vcentered">
           <Fade bottom cascade fraction={0.5}>
             <div className="column is-half has-text-centered-mobile has-text-left-tablet">
-              <p className="overline">Our technology</p>
+              {/* <p className="overline">Our technology</p> */}
               <h1 className="title is-1">Powered by our software</h1>
               <p className="subtitle">
-                Know your candidates sooner to make better hiring decisions
-                later.
+                We use our software to help you make better and more informed
+                hiring decisions
               </p>
             </div>
           </Fade>
@@ -149,7 +149,9 @@ export default function Home() {
           <div className="column is-full-mobile is-half-tablet has-text-centered-mobile has-text-left-tablet">
             <Fade bottom>
               <p className="overline">Let's connect</p>
-              <h1 className="title is-1">Looking to hire?</h1>
+              <h1 className="title is-1">
+                Struggling to fin the right candidates?
+              </h1>
               <p className="subtitle">
                 We can connect you with the top candidates searching for work at
                 companies like yours!

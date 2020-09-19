@@ -150,7 +150,7 @@ export default function Home() {
             <Fade bottom>
               <p className="overline">Let's connect</p>
               <h1 className="title is-1">
-                Struggling to fin the right candidates?
+                Struggling to find the right candidates?
               </h1>
               <p className="subtitle">
                 We can connect you with the top candidates searching for work at

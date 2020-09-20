@@ -11,3 +11,6 @@
 This website is created for a Minneapolis based recruiting company who wanted a better web prescence to generate new clients looking to hire candidates. This was created using a Jamstack with Gatsby.js and Netlify. 
 
 _Gatsby.js | Bulma | Netlify | SCSS | Adobe Illustrator | Axios | Helmet_
+
+
+**Launching Soon!!**

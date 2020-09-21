@@ -1,24 +1,18 @@
 import React, { useState, useRef } from "react"
 import { Fade, HeadShake } from "react-reveal"
 import BrowserProfiles from "../assets/images/browserProfiles.svg"
-// imort BrowserProfiles from "../assets/images/browserProfiles.js"
-// import LaptopSearch from "../assets/images/laptopSearch.svg"
 import StackedResumes from "../assets/images/StackedResumes.svg"
 import TeamMembers from "../assets/images/TeamMembers.svg"
 import DeskAgreement from "../assets/images/DeskAgreement.svg"
-// import EmployeeInMirror from "../assets/images/EmployeeInMirror.svg"
 import "../assets/styles/global.scss"
 import Layout from "../components/Layout.js"
 
 export default function Home() {
-  // const [candidateName, setCandidateName] = useState("")
-  // const [candidateEmail, setCandidateEmail] = useState("")
   const [companyName, setCompanyName] = useState("")
   const [companyEmail, setCompanyEmail] = useState("")
   const [error, setError] = useState(null)
   const [submitted, setSubmitted] = useState(false)
   const companyForm = useRef(null)
-  // const candidateForm = useRef(null)
 
   const scrollToCompanyForm = () => {
     companyForm.current.scrollIntoView({ behavior: "smooth", block: "start" })
@@ -59,7 +53,7 @@ export default function Home() {
             <Fade bottom cascade fraction={0.5} ssrFadeout={true}>
               <div className="column is-full">
                 <h1 className="title is-1">
-                  Looking to Hire? <br /> We can help.
+                  Looking to hire? <br /> We can help.
                 </h1>
                 <p className="subtitle">
                   We build teams and help you hire the right people
@@ -107,8 +101,8 @@ export default function Home() {
                 {/* <p className="overline">Trusted history</p> */}
                 <h1 className="title is-1">Our proven process</h1>
                 <p className="subtitle">
-                  We help companies recruit the best candidates in technology,
-                  marketing, sales, and HR
+                  We help companies hire the right candidates in IT, marketing,
+                  sales, and HR
                 </p>
               </div>
             </Fade>
@@ -148,13 +142,13 @@ export default function Home() {
           </div>
           <div className="column is-full-mobile is-half-tablet has-text-centered-mobile has-text-left-tablet">
             <Fade bottom>
-              <p className="overline">Let's connect</p>
-              <h1 className="title is-1">
-                Struggling to find the right candidates?
+              {/* <p className="overline">Let's connect</p> */}
+              <h1 className="title is-1 limit-width">
+                We will help you find the right candidates
               </h1>
               <p className="subtitle">
-                We can connect you with the top candidates searching for work at
-                companies like yours!
+                If you need to hire quickly or are struggling to find the right
+                people, we can help.
               </p>
             </Fade>
             <form
@@ -205,7 +199,7 @@ export default function Home() {
               <Fade bottom cascade delay={900} fraction={0.5}>
                 <div className="mt-5">
                   <button className="button button-blue-gradient" type="submit">
-                    Build your team
+                    Let's chat
                   </button>
                 </div>
               </Fade>

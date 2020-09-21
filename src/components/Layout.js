@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
           and trusted recruiting history."
         />
         <title>Hirerite</title>
+        <meta name="image" content="/hireriteLogo.png" />
         <meta property="og:image" content="/hireriteLogo.png" />
         <link
           rel="apple-touch-icon"

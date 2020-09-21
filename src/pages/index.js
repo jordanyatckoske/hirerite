@@ -144,7 +144,7 @@ export default function Home() {
             <Fade bottom>
               {/* <p className="overline">Let's connect</p> */}
               <h1 className="title is-1 limit-width">
-                We will help you find the right candidates
+                We help you find the right candidates
               </h1>
               <p className="subtitle">
                 If you need to hire quickly or are struggling to find the right

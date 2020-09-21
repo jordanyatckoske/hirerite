@@ -13,4 +13,4 @@ This website is created for a Minneapolis based recruiting company who wanted a 
 _Gatsby.js | Bulma | Netlify | SCSS | Adobe Illustrator | Axios | Helmet_
 
 
-**Launching Soon!!**
+**Just Launched!!**

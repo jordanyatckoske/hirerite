@@ -192,7 +192,9 @@ textarea {
   @include modifiers($colors, "color");
 }
 .limit-width {
-  max-width: 450px;
+  @include media(">tablet") {
+    max-width: 450px;
+  }
 }
 .gradient {
   background: linear-gradient(138deg, #988cfb 30%, #f97cf0 100%);
